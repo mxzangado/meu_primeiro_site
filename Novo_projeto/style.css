@@ -1,0 +1,354 @@
+/* Resetando e usando as Configurações Globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI',sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #121212;
+    color: #E0E0E0;
+    line-height: 1.6;
+}
+
+/* Cabeçalho mantendo o header ficar preso ao topo durante a rolagem*/
+header {
+    background-color: #1F1F1F;
+    padding: 1.1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid #D4AF37;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Logo */
+.logo {
+    width: 160px;
+    height: auto;
+    display: block;
+    border: 2px solid #D4AF37;
+    border-radius: 6px;
+    padding: 4px;
+}
+
+nav ul {
+    display: flex;
+    gap: 6rem;
+    list-style: none;
+}
+
+/* Links de navegação */
+nav a {
+    color: white;
+    font-size: 2.6rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+/* Colocando um estilo ao link*/
+nav a:hover {
+    color: yellow;   
+}
+
+/* Hero Seçao */
+.hero{
+    text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(180deg, #000000 0%, #1A1A1A 100%);
+}
+
+/* Hero Titulo */
+.hero h1 {
+    font-size: 4.8rem;
+    color: #FFFFFF;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 2.1rem;
+    max-width: 700px;
+    margin: 0 auto 30px auto;
+    color: #B0B0B0;
+}
+
+/* Botão do WhatsApp */
+.btn-whatsapp {
+    display: inline-block;
+    background-color: #25D366;
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 15px 30px;
+    font-size: 1.6rem;
+    font-weight: bold;
+    border-radius: 30px;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.btn-whatsapp:hover {
+    background-color: #1EBE5D;
+    transform: translateY(-2px);
+}
+
+#sobre{
+    background-color: #1F1F1F;
+    font-size: 2.2rem;
+}
+
+#sobre h2 {
+    text-align: center;
+    color: #D4AF37;
+    margin-bottom: 20px;
+    font-size: 3.2rem;
+}
+
+/* Usamos # porque servicos é o id da seção e o ponto para a classe */
+#sobre p {
+    max-width: 800px;
+    margin: 0 auto 20px auto;
+    color: #B0B0B0;
+    line-height: 1.8;
+}
+
+
+.container {
+    padding: 60px 8%;
+    text-align: center;
+}
+
+.container h1 {
+  font-size: 2rem;
+  color: #D4AF37;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+/* Estilo para os cards de serviços */
+/* Isso organiza os cards de todas as colunas responsivas */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+/* Esse bloco aplica estilo a cada elemento com a classe .card */
+.card {
+  background-color: #1E1E1E;
+  padding: 25px;
+  border-radius: 8px;
+  border: 1px solid #333333;
+  text-align: left;
+  transition: border-color 0.3s;
+}
+
+/* Essa regra muda a borda do card para dourado */
+.card:hover {
+  border-color: #D4AF37;
+}
+
+/* Estilo para o título do card h3 */
+.card h3 {
+  color: #D4AF37;
+  margin-bottom: 15px;
+}
+
+/* Ajustes específicos para as listas de serviços dentro do card */
+.card ul {
+  list-style-type: square;
+  padding-left: 20px;
+  
+}
+
+.card li {
+  color: #CCCCCC;
+  font-size: 0.9rem;
+  margin-bottom: 8px;
+  font-size: 1.6rem;
+}
+
+/* estilo para as imagens dentro dos cards */
+.card img {
+    display: block;
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 16px;
+}
+
+/* Missao visa~e valores */
+
+#missao-visao-valores h2 {
+    color: #D4AF37;
+    font-size: 3.2rem;
+    margin-bottom: 4rem;
+    text-align: center;
+    margin: 0 auto 4rem;
+    padding: 1rem 0;
+}
+
+#missao-visao-valores .card {
+    background-color: #181818;
+    border: none;
+    border-top: 3px solid #D4AF37;
+    border-radius: 2px;
+    text-align: center;
+    gap: 1rem;
+}
+
+#missao-visao-valores .card h3 {
+    font-size: 2.2rem;
+}
+
+/*tamnho da fonte do paragrafo da missao, visao e valores*/
+#missao-visao-valores .card p {
+    font-size: 1.8rem;
+    line-height: 1.6;
+}
+
+/* Contato */
+#contato h2 {
+    font-size: 3.2rem;
+    color: #D4AF37;
+    margin-bottom: 2rem;
+}
+
+#contato h3 {
+    font-size: 2.2rem;
+    color: #D4AF37;
+    margin-bottom: 1rem;
+}
+
+#contato p {
+    font-size: 1.8rem;
+    line-height: 1.6;
+}
+
+/* Responsividade botao */
+#contato .btn-whatsapp {
+    margin-top: 2rem;
+}
+
+/*Depoimentos*/
+#depoimentos > h2 {
+    color: #D4AF37;
+    font-size: 3.2rem;
+    margin-bottom: 1rem;
+}
+
+.aviso-depoimentos {
+    color: #B0B0B0;
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
+}
+
+.depoimentos-lista {
+    display: flex;
+    flex-direction: column;
+}
+
+.depoimento {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem 0;
+    border-bottom: 1px solid #333333;
+    text-align: left;
+}
+
+.depoimento:last-child {
+    border-bottom: none;
+}
+
+.depoimento img {
+    width: 9rem;
+    height: 9rem;
+    flex: 0 0 9rem;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.depoimento-texto {
+    flex: 1;
+}
+
+.depoimento blockquote p {
+    color: #CCCCCC;
+    font-size: 1.8rem;
+}
+
+.depoimento h3 {
+    color: #D4AF37;
+    font-size: 1.6rem;
+    margin-top: 1rem;
+}
+
+@media (max-width: 480px) {
+    .depoimento {
+        align-items: flex-start;
+        gap: 1.2rem;
+    }
+
+    .depoimento img {
+        width: 6.4rem;
+        height: 6.4rem;
+        flex-basis: 6.4rem;
+    }
+}
+
+/*galeria de imagens*/
+#galeria > h2 {
+    color: #D4AF37;
+    font-size: 3.2rem;
+    margin: 0 0 1rem;
+}
+
+#galeria > .aviso-galeria {
+    color: #B0B0B0;
+    font-size: 1.6rem;
+    margin-bottom: 2.4rem;
+}
+
+.galeria-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 2rem;
+}
+
+.galeria-item {
+    margin: 0;
+    text-align: left;
+}
+
+.galeria-item img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.galeria-item figcaption {
+    color: #D4AF37;
+    font-size: 1.6rem;
+    margin-top: 1rem;
+}
+
+/* Rodapé */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #000000;
+  border-top: 1px solid #222222;
+  font-size: 0.85rem;
+  color: #777777;
+  font-size: 1.6rem;
+}
